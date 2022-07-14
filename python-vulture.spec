@@ -1,11 +1,11 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-vulture
-Version:	2.3
+Version:	2.5
 Release:	1
 Summary:	Vulture finds unused code in Python programs. 
 License:	MIT
 URL:		https://github.com/jendrikseipp/vulture
-Source0:	https://files.pythonhosted.org/packages/30/8b/bf4765866521da744ca081f09184657c0dc4fd8ee910a2fd1043d2c7cd6e/vulture-2.3.tar.gz
+Source0:	https://files.pythonhosted.org/packages/f2/7b/5f3249c9b3076bceb2839cf7ea9847e504d180e90dfac32300403a9e7139/vulture-2.5.tar.gz
 BuildArch:	noarch
 
 Requires:	python3-toml
@@ -28,7 +28,7 @@ Provides:	python3-vulture-doc
 Vulture finds unused code in Python programs. This is useful for cleaning up and finding errors in large code bases. If you run Vulture on both your library and test suite you can find untested code.
 
 %prep
-%autosetup -n vulture-2.3
+%autosetup -n vulture-2.5
 
 %build
 %py3_build
@@ -68,5 +68,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Thu Jul 07 2022 hkgy <kaguyahatu@outlook.com> - 2.5-1
+- Upgrade version to 2.5
+
 * Tue Oct 12 2021 Python_Bot <Python_Bot@openeuler.org> - 2.3-1
 - Package Init
